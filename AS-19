@@ -1,0 +1,20 @@
+def calculate_voting_eligibility(age):
+    try:
+        age = int(age)
+        if age < 0:
+            return "Age cannot be negative. Please enter a valid age."
+        elif age >= 18:
+            return "You are eligible to vote."
+        else:
+            years_to_vote = 18 - age
+            return f"You are allowed to vote after {years_to_vote} years."
+    except ValueError:
+        return "Invalid input. Please enter a valid age as a whole number."
+
+# Example usage:
+try:
+    age = input("Enter your age: ")
+    result = calculate_voting_eligibility(age)
+    print(result)
+except Exception as e:
+    print(f"Error: {e}")
