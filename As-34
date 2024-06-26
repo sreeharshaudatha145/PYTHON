@@ -1,0 +1,23 @@
+def calculate_averages():
+    positive_numbers = []
+    negative_numbers = []   
+    while True:
+        num = int(input("Enter a number (-1 to stop): "))
+        if num == -1:
+            break
+        elif num > 0:
+            positive_numbers.append(num)
+        elif num < 0:
+            negative_numbers.append(num)    
+    if positive_numbers:
+        average_positive = sum(positive_numbers) / len(positive_numbers)
+    else:
+        average_positive = 0    
+    if negative_numbers:
+        average_negative = sum(negative_numbers) / len(negative_numbers)
+    else:
+        average_negative = 0
+    return average_positive, average_negative
+average_positive, average_negative = calculate_averages()
+print(f"Average of positive numbers: {average_positive}")
+print(f"Average of negative numbers: {average_negative}")
