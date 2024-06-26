@@ -1,0 +1,19 @@
+import math
+from functools import reduce
+
+def gcd_multiple_numbers(numbers):
+    return reduce(math.gcd, numbers)
+
+def lcm(a, b):
+    return abs(a * b) // math.gcd(a, b)
+
+def lcm_multiple_numbers(numbers):
+    return reduce(lcm, numbers)
+
+# Example usage
+numbers = [24, 54, 36, 90]
+gcd_result = gcd_multiple_numbers(numbers)
+lcm_result = lcm_multiple_numbers(numbers)
+
+print(f"The GCD of {numbers} is {gcd_result}")
+print(f"The LCM of {numbers} is {lcm_result}")
