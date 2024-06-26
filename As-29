@@ -1,0 +1,20 @@
+def get_sort_order():
+    while True:
+        order = input("Enter 'A' for ascending or 'D' for descending order: ").strip().upper()
+        if order in ['A', 'D']:
+            return order
+        print("Invalid input. Please enter 'A' or 'D'.")
+def sort_names(names, order):
+    if order == 'A':
+        return sorted(names)
+    else:
+        return sorted(names, reverse=True)
+# Example usage
+names = input("Enter the names, separated by commas: ").strip().split(',')
+# Trim whitespace from each name
+names = [name.strip() for name in names]
+sort_order = get_sort_order()
+sorted_names = sort_names(names, sort_order)
+print("Sorted names:")
+for name in sorted_names:
+    print(name)
