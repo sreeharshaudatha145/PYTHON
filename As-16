@@ -1,0 +1,16 @@
+def find_maximum():
+    try:
+        # Input three numbers from the user
+        num1, num2, num3 = map(float, input("Enter three numbers separated by space: ").split())
+        
+        # Find the maximum using Python's built-in max function
+        max_num = max(num1, num2, num3)
+        
+        # Print the maximum number
+        print(f"The maximum of {num1}, {num2}, {num3} is: {max_num}")
+    
+    except ValueError:
+        print("Invalid input. Please enter three valid numbers separated by space.")
+
+# Example usage:
+find_maximum()
