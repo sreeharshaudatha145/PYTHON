@@ -1,0 +1,10 @@
+def add(x, n):
+    return x + n
+x = int(input("Enter the value of X: "))
+n = int(input("Enter the value of N: "))
+choice = int(input("Enter the Choice: "))
+if choice == 2:
+    result = add(x, n)
+    print(f"Add({x},{n}) = {result}")
+else:
+    print("Invalid Choice")
