@@ -1,0 +1,28 @@
+def fibonacci(n):
+    # Handle base cases
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    
+    # Initialize variables for the first two Fibonacci numbers
+    a, b = 0, 1
+    
+    # Iterate to find the nth Fibonacci number
+    for _ in range(2, n + 1):
+        a, b = b, a + b
+    
+    return b
+
+# Example usage:
+try:
+    N = int(input("Enter the value of N (greater than or equal to 0): "))
+    if N < 0:
+        raise ValueError("N should be a non-negative integer.")
+    
+    # Call the fibonacci function to get the Nth Fibonacci number
+    result = fibonacci(N)
+    
+    print(f"The {N}th Fibonacci number is: {result}")
+except ValueError as ve:
+    print(f"Error: {ve}")
