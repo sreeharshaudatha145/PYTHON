@@ -1,0 +1,14 @@
+def reverse_string(input_string):
+    reversed_string = ""
+    # Iterate over the characters of the input string from last to first
+    for i in range(len(input_string) - 1, -1, -1):
+        reversed_string += input_string[i]
+    return reversed_string
+
+# Example usage:
+try:
+    string_input = input("String: ")
+    reversed_string = reverse_string(string_input)
+    print(f"Reverse String: {reversed_string}")
+except Exception as e:
+    print(f"Error: {e}")
