@@ -1,0 +1,13 @@
+def generate_sequence(M, N, K):
+    sequence = []
+    current = M
+    while current <= N:
+        sequence.append(current)
+        current += K
+    return sequence
+# Example usage
+M = 50
+N = 100
+K = 7
+result_sequence = generate_sequence(M, N, K)
+print(", ".join(map(str, result_sequence)))
