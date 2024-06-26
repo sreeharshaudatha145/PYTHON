@@ -1,0 +1,14 @@
+def remove_duplicates_and_sort(array):
+    # Convert to set to remove duplicates
+    unique_elements = set(array)
+    
+    # Convert back to list and sort
+    sorted_array = sorted(unique_elements)
+    
+    return sorted_array
+
+# Example usage
+array = [15, 14, 25, 14, 32, 14, 31]
+result = remove_duplicates_and_sort(array)
+
+print(f"Sorted Array = {result}")
